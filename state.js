@@ -8,10 +8,10 @@ var currentPlayingCard = null
 // The consolidated state of our app
 var state = {
   // World
-  worldRatio: getWorldRatio(),
+    worldRatio: getWorldRatio(),
   // Game
-  turn : 1,
-  players :[
+    turn : 1,
+    players :[
       {
         name: 'Anne of Cleve',
       },
@@ -19,5 +19,5 @@ var state = {
         name : 'William the Bald',
       },
   ],
-  currentPlayerIndex: Math.round(Math.random()),
+    currentPlayerIndex: Math.round(Math.random()),
 }

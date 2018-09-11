@@ -3,9 +3,12 @@ new Vue({
     el:'#app',
 
     template: `<div id="#app">
-            Hello World!
-            {{ worldRatio}}
-        </div>`,
+                    <top-bar 
+                    :turn="turn" 
+                    :current-player-index="currentPlayerIndex" 
+                    :players="players"
+                    />      
+                </div>`,
 
     data: state,
 
@@ -17,3 +20,5 @@ new Vue({
     },
 
 })
+
+console.log('Yes! We are using Vue version', Vue.version)
