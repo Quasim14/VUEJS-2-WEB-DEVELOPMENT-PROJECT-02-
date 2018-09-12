@@ -9,7 +9,7 @@ new Vue({
                     :players="players"
                     />  
                     
-                    <card :def="testCard"/>       
+                    <card :def="testCard" @click.native="handlePlay"/>       
                 </div>`,
 
     data: state,
@@ -17,6 +17,12 @@ new Vue({
     computed: {
         testCard() {
             return cards.archers
+        }
+    },
+
+    methods:{
+        handlePlay(){
+            console.log('Vous venez de jouer la carte')
         }
     },
 
