@@ -1,23 +1,34 @@
 new Vue({
     name: 'game',
-    el:'#app',
+    el: '#app',
 
     template: `<div id="#app">
                     <top-bar 
                     :turn="turn" 
                     :current-player-index="currentPlayerIndex" 
                     :players="players"
-                    />      
+                    />  
+                    
+                    <card :def="testCard"/>       
                 </div>`,
 
     data: state,
 
-    // Window resize handling
-    window: addEventListener('resize', () => {state.worldRatio = getWorldRatio()}),
+    computed: {
+        testCard() {
+            return cards.archers
+        }
+    },
 
-    mounted(){
+    // Window resize handling
+    window: addEventListener('resize', () => {
+        state.worldRatio = getWorldRatio()
+    }),
+
+    mounted() {
         console.log(this.$data === state)// true or false
     },
+
 
 })
 
