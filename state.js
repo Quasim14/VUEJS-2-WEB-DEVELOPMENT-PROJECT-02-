@@ -7,10 +7,13 @@ var currentPlayingCard = null
 
 // The consolidated state of our app
 var state = {
-  // World
+    // World
     worldRatio: getWorldRatio(),
-  // Game
+    // Game
     turn : 1,
+    // UI
+    activeOverlay: null,
+
     players :[
       {
         name: 'Anne of Cleve',

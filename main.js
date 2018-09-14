@@ -3,9 +3,13 @@ new Vue({
     el: '#app',
 
     template: `<div id="#app">
-                    <top-bar :turn="turn" :current-player-index="currentPlayerIndex" :players="players"/>  
-                    <hand :cards="testHand" />  
-                       
+                    <top-bar :turn="turn" 
+                    :current-player-index="currentPlayerIndex" 
+                    :players="players"/>  
+                    
+                    <transition name="fade">
+                    <hand v-if="!activeOverlay" :cards="testHand" />
+                    </transition>
                     
                 </div>`,
 
