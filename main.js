@@ -9,7 +9,7 @@ new Vue({
                     :players="players"
                     />  
                     
-                    <card :def="testCard" @click.native="handlePlay"/>       
+                    <card :def="testCard" @play="handlePlay"/>       
                 </div>`,
 
     data: state,
@@ -23,7 +23,8 @@ new Vue({
     methods:{
         handlePlay(){
             console.log('Vous venez de jouer la carte')
-        }
+        },
+
     },
 
     // Window resize handling
