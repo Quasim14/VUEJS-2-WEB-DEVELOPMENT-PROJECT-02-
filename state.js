@@ -18,6 +18,8 @@ var state = {
       {
         name : 'William the Bald',
       },
+
   ],
+    testHand:[],
     currentPlayerIndex: Math.round(Math.random()),
 }
